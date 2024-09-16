@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@400;700&display=swap');
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(0, 0, 0, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header.hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.logo img {
+  height: 60px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.plasmsName {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: #66fcf1;
+  margin-left: 20px;
+}
+
+.nav {
+  flex: 1;
+  text-align: center;
+}
+
+.nav ul {
+  display: inline-flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.nav li {
+  margin: 0 25px;
+}
+
+.nav a {
+  color: #d9e3f0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.nav a::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #0dcaf0;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.nav a:hover {
+  color: #0dcaf0;
+  transform: scale(1.15);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}

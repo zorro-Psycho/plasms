@@ -1,0 +1,158 @@
+/* Canvas Container */
+.canvasContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url('/space.jpg') no-repeat center center;
+  /* background: linear-gradient(135deg, #0b1e42, #0a0c29); Darker space-like gradient */
+}
+
+.canvas {
+  width: 100%;
+  height: 100vh;
+}
+
+/* General Container */
+.container {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)); /* Dark gradient with more opacity */
+}
+
+/* Overview Section */
+.overviewSection {
+  padding: 60px 20px;
+  padding-top: 180px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.title {
+  font-family: 'Orbitron', sans-serif;  /* Sleek futuristic font */
+  font-size: 3.4rem;
+  margin-bottom: 30px;
+  margin-top: -20px;
+  color: #0dcaf0; /* Bright electric blue */
+}
+
+.description {
+  font-family: 'Poppins', sans-serif; /* Clean, readable font */
+  font-size: 1.4rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #e6e6e6; /* Softer light gray for readability */
+}
+
+/* Features Section */
+.featuresSection {
+  margin-top: 100px;
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #111a338e, #1d2a573c); /* Deep space blue gradient */
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.featureCard {
+  background: rgba(255, 255, 255, 0.05); /* Light, transparent overlay */
+  padding: 25px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #0dcaf0;
+  cursor: pointer;
+}
+
+.featureCard:hover {
+  transform: scale(1.06);
+  box-shadow: 0 12px 36px rgba(13, 202, 240, 0.7);
+}
+
+.featureCard h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #1fda9a; /* Soft neon green */
+  margin-bottom: 15px;
+}
+
+.featureCard p {
+  font-family: 'Poppins', sans-serif;
+  color: #d1d1d1;
+}
+
+/* Plan Section */
+.plansSection {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #0b1e4246, #0a0c2937); /* Matching background to blend with the theme */
+}
+
+.subtitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.7rem;
+  margin-bottom: 35px;
+  color: #0dcaf0; /* Electric blue */
+}
+
+.planGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+}
+
+.planCard {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 1px solid #0dcaf0;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.planCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(13, 202, 240, 0.3), transparent); /* Softer radial gradient */
+  transition: opacity 0.4s;
+  opacity: 0;
+  z-index: -1;
+}
+
+.planCard:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 40px rgba(13, 202, 240, 0.8);
+  border: 1px solid #ffffff;
+}
+
+.planCard:hover::before {
+  opacity: 1;
+}
+
+.planCard h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: #1fda9a; /* Soft neon green */
+  margin-bottom: 15px;
+}
+
+.planFeatures {
+  list-style-type: none;
+  padding: 0;
+  color: #e0e0e0; /* Light gray text */
+}
+
+.planFeatures li {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}

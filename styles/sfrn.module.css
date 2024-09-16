@@ -1,0 +1,139 @@
+.canvasContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: 
+    linear-gradient(180deg, rgba(17, 26, 51, 0.9), rgba(29, 42, 87, 0.7)),
+    url('/bg2.jpg') no-repeat center center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.canvas {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  background: linear-gradient(180deg, rgba(0, 0, 50, 0.65), rgba(0, 0, 20, 0.65));
+  color: white;
+}
+
+.section {
+  margin-top: 200px;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.2rem;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  color: #0dcaf0;
+}
+
+.subtitle {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #FFD700;
+}
+
+.sectionOverview {
+  background: linear-gradient(160deg, #3f18004a, #a72f077d);
+  padding: 80px;
+}
+
+.planGrid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2rem;
+}
+
+.planCard {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 1px solid #0dcaf0;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.planCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(13, 202, 240, 0.2), transparent);
+  transition: opacity 0.4s;
+  opacity: 0;
+  z-index: -1;
+}
+
+.planCard:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 30px rgba(13, 202, 240, 0.8);
+  border: 1px solid #ffffff;
+}
+
+.planCard:hover::before {
+  opacity: 1;
+}
+
+.planFeatures {
+  list-style-type: none;
+  padding: 0;
+  color: #d3d3d3;
+}
+
+.planFeatures li {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+
+.subheading {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  color: #e8ef11;
+}
+
+.text {
+  font-size: 1.2rem;
+  color: #DDDDDD;
+  margin-top: 1.5rem;
+}
+.description {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #d3d3d3;
+  margin-bottom: 180px;
+}
+@media (max-width: 768px) {
+  .planGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,29 @@
+.ul {
+    list-style: disc;
+    margin-left: 20px;
+  }
+  
+  .main {
+    background-color: #1f2833;
+    color: #c5c6c7;
+    padding: 40px 20px;
+    text-align: left;
+  }
+  
+  .main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #66fcf1;
+  }
+  
+  .main p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .main h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #66fcf1;
+  }
+  
