@@ -12,7 +12,7 @@ const Header = () => {
 
     scrollTimeout = setTimeout(() => {
       setIsVisible(true);
-    }, 250); // Header reappears 150ms after scrolling stops
+    }, 250); // Header reappears 250ms after scrolling stops
   };
 
   useEffect(() => {
@@ -37,9 +37,16 @@ const Header = () => {
           <li><a href="/sfrn">SFRN</a></li>
           <li><a href="/lnr">LNR</a></li>
           <li><a href="/qmn">QMN</a></li>
+          <li className={styles.more}>
+            <a href="#">More</a>
+            <ul className={styles.dropdown}>
+              <li><a href="/Research">Research and Development</a></li>
+              <li><a href="/partnership">Partnerships</a></li>
+              <li><a href="/Support">Support</a></li>
+            </ul>
+          </li>
           <li><a href="/about">About Us</a></li>
           <li><a href="/LoginSignUp">Login</a></li>
-
         </ul>
       </nav>
     </header>

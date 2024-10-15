@@ -102,4 +102,33 @@
     margin-bottom: 10px;
     font-size: 1.2rem;
   }
+  .iframeContainer {
+    position: relative;
+    padding-top: 46.25%; /* Aspect ratio 16:9 */
+    overflow: hidden;
+    margin: 50px auto;
+    margin-bottom: 0px;
+    max-width: 70%; /* Optional: to ensure it scales down on smaller screens */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border to match the space theme */
+    border-radius: 15px; /* Rounded corners for a sleek look */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 150, 250, 0.7); /* Glowing shadow */
+    background: radial-gradient(circle, rgba(13, 202, 240, 0.1), transparent); /* Soft radial glow */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth hover effects */
+  }
+  
+  .iframeContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+  }
+  
+  .iframeContainer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), 0 0 60px rgba(0, 150, 250, 0.8);
+    border-color: rgba(0, 150, 250, 0.5); /* Highlight the border on hover */
+  }
   

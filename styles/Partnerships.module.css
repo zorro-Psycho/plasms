@@ -1,0 +1,52 @@
+/* Industry Collaborations Section */
+.industrySection {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/acad.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+  
+  
+}
+  
+  /* Academic Partnerships Section */
+  .academicSection {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/industry.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+  
+  
+}
+  
+  /* Government Collaborations Section */
+  .governmentSection {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/collab.jpg') no-repeat center center fixed;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 20px;
+      
+      
+  }
+  
+  .title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #0dcaf0;
+  }
+  
+  .description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    max-width: 900px;
+    line-height: 1.8;
+  }

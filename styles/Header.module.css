@@ -35,6 +35,7 @@
   font-size: 2rem;
   color: #66fcf1;
   margin-left: 20px;
+  margin-right: -60px;
 }
 
 .nav {
@@ -51,7 +52,8 @@
 }
 
 .nav li {
-  margin: 0 25px;
+  margin: 0 17px;
+  position: relative;
 }
 
 .nav a {
@@ -90,4 +92,50 @@
   50% {
     transform: translateY(-8px);
   }
+}
+
+/* Dropdown Menu */
+.more {
+  position: relative;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%); /* Centering the dropdown */
+  background-color: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  padding: 20px 0;
+  z-index: 1000;
+  width: 280px; /* Adjusted width for consistency */
+}
+
+.more:hover .dropdown {
+  visibility: visible;
+  display: block;
+}
+
+.dropdown li {
+  text-align: center; /* Center-align the text */
+  padding: 15px 0; /* Equal vertical padding for uniform gaps */
+  white-space: nowrap;
+  margin: 0 10px; /* Adds equal margin around each list item */
+}
+
+.dropdown li a {
+  color: #d9e3f0;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  display: block; /* Ensure the anchor tag occupies the full space */
+  width: 100%; /* Full width for centered text */
+}
+
+.dropdown li a:hover {
+  color: #0dcaf0;
 }
